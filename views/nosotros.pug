@@ -1,4 +1,32 @@
-extends ./layout/index 
-//- el extend me sirve para poder mandarle bloques a la master page ()
+extends ./layout/index
+
 block contenido
-    p Nosotros  
+    main.container.mt-5     
+        .row 
+            .col-md-5
+                img(src="img/nosotros.jpg", alt="Imagen sobre nosotros", class="img-fluid")
+            .col-md-7
+                h1= pagina
+                blockquote Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem excepturi aliquam molestias, quas laborum exercitationem maiores sequi perferendis eligendi eveniet tempore! Consequatur, voluptas porro cumque ducimus dolore perferendis voluptatibus provident!
+
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, illo veniam nam iure corporis dicta vitae possimus facere eaque totam, ea eius, velit laboriosam? Atque quidem molestias aspernatur numquam optio!
+
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi assumenda hic quia minima, iure nam exercitationem officiis minus perferendis. Nostrum veniam obcaecati pariatur soluta voluptates quam molestias, voluptatibus eveniet unde?
+
+    .listado-iconos 
+        .container.mt-5.py-5.text-center 
+            .row 
+                .col-md-4
+                    img(src="img/icono_seguridad.svg" alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad 
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores in, beatae dolor ab nostrum numquam voluptatem corporis fuga id repellat aspernatur ullam voluptate ut facere quas laboriosam. Tempore, suscipit exercitationem.
+
+                .col-md-4
+                    img(src="img/icono_destinos.svg" alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos 
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores in, beatae dolor ab nostrum numquam voluptatem corporis fuga id repellat aspernatur ullam voluptate ut facere quas laboriosam. Tempore, suscipit exercitationem.
+
+                .col-md-4
+                    img(src="img/icono_precios.svg" alt="icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Los mejores precios 
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores in, beatae dolor ab nostrum numquam voluptatem corporis fuga id repellat aspernatur ullam voluptate ut facere quas laboriosam. Tempore, suscipit exercitationem.
