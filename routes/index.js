@@ -16,4 +16,5 @@ router.get('/nosotros', paginaNosotros)
 router.get('/viajes', paginaViajes)
 
 router.get('/testimoniales', paginaTestimoniales )
+
 export default router;
