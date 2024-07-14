@@ -1,6 +1,32 @@
 extends ./layout/index
 
+//- lo que yo coloque en los bloques se mostrar en donde los estoy mandando a llamar 
+block slider 
+    .slider 
+        h1 Rio de Janeiro 
+        em aventura
+
 block contenido
     main.container.mt-5     
-        .row 
-            h1= pagina
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5
+            .col-md-6 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptas omnis corrupti provident totam ipsam, mollitia repudiandae, ipsum adipisci consequatur qui quis placeat nam minus deserunt reiciendis ducimus enim voluptatum?
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum blanditiis modi nemo aut facilis, quaerat tenetur aliquid molestiae officia voluptatem ea rerum totam quis, sit voluptas aperiam neque? Nulla, ab!
+            .col-md-6   
+                img(src="/img/inicio_nosotros.jpg", alt="Imagen nosotros", class="img-fluid")
+        include ./layout/bloque_viajes
+        
+    .descuento 
+        .container  
+            .row
+                .col-md-6
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje a Canada
+                        p.fecha 15 de Julio de 2024 - 21 de Julio de 2022
+                        p.precio $2,500 USD
+
+    .container 
+        h2.mt-5.text-center Testimoniales
+        include ./layout/bloque_testimoniales

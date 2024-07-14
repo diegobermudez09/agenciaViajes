@@ -25,6 +25,10 @@ app.use((req, res, next) => {
     next();
 })
 
+// Agregar body parser para leer los datos del formulario
+app.use(express.urlencoded({extended: true}));
+
+
 // Habilitar PUG
 app.set('view engine', 'pug');
 
