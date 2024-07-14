@@ -1,4 +1,5 @@
 import express from 'express'
+import { paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales } from '../controllers/paginasController.js';
 
 const router = express.Router(); // estamos usando la instancia de express pero solo utilizando el router
 
@@ -9,33 +10,10 @@ const router = express.Router(); // estamos usando la instancia de express pero 
     send> solo imprime texto
     render> espera el nombre de la vista para mostrarlo
 */
-router.get('/', (req, res) => {
-    res.render('inicio',{
-        pagina: 'Inicio'
-    })
+router.get('/', paginaInicio)
+router.get('/nosotros', paginaNosotros)
 
-})
-router.get('/nosotros', (req, res) => {
+router.get('/viajes', paginaViajes)
 
-    // const viajes = 'Viaje a Alemania';
-
-    res.render('Nosotros', { 
-        // le paso valores hacia la vista desde aqui
-        pagina: 'Nosotros'
-    })
-})
-
-router.get('/viajes', (req, res) => {
-    res.render('viajes',{
-        pagina: 'Viajes'
-    })
-
-})
-
-router.get('/testimoniales', (req, res) => {
-    res.render('testimoniales',{
-        pagina: 'Testimoniales'
-    })
-
-})
+router.get('/testimoniales', paginaTestimoniales )
 export default router;
