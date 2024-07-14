@@ -4,6 +4,8 @@ import express from 'express'
 import router from './routes/index.js';
 import db from './config/db.js';
 
+// console.log(process.env.DATABASE)
+
 const app = express(); // es necesario que solo haya UNA instancia global de la aplicación
 
 // Conectar la base de datos
